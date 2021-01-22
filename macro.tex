@@ -1,5 +1,3 @@
-%\documentclass[a4j,dvipdfmx]{jsarticle}
-\bibliographystyle{junsrt}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{amsmath,amssymb,physics,mathtools}
 \usepackage{multicol}
@@ -13,6 +11,7 @@
 \usepackage{mathrsfs}
 \usepackage{ascmac}
 \usetikzlibrary{decorations.markings}
+\usepackage[backend=biber,style=phys]{biblatex}
 
 \makeatletter
     \renewcommand{\theequation}{%
@@ -20,12 +19,4 @@
     \@addtoreset{equation}{section}
   \makeatother
 \date{}
-\makeatletter
-\def\@cite#1#2{$^{\mbox{\tiny[{#1\if@tempswa , #2\fi}]}}$}
-\makeatother
-\makeatletter
-\renewcommand{\@cite}[1]{\textsuperscript{#1)}}
-\renewcommand{\@biblabel}[1]{#1)}
-\makeatother
-\newcommand{\Cross}{$\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.2ex, red] \draw (0,0) -- (1,1) (0,1) -- (1,0);}$}%
 \def\st#1\en{\begin{align}#1\end{align}}
